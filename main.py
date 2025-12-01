@@ -185,13 +185,13 @@ def lookup_products(products):
         if "," in line:
             name, price = line.rsplit(",", 1)
         else:
-            # malformed line
+            # unrecognized line
             continue
         name = name.strip()
         try:
             price_val = float(price.strip())
         except ValueError:
-            # skip malformed price lines
+            # skip unformatted price lines
             continue
         all_names.append(name)
         all_prices.append(price_val)
@@ -218,7 +218,7 @@ def complete_order(user_id, product_list):
     time.sleep(1.5)
     prices = []
     products = []
-    order = []  # list for current order (deep vs shallow)
+    order = []  # list for current order 
 
     try:
         orders = open("orders.csv", 'a', newline="")
@@ -233,7 +233,7 @@ def complete_order(user_id, product_list):
             products.append(product_list[i][0])
             order.append(product_list[i][0])
         except Exception:
-            print("Malformed product entry; skipping.")
+            print("Unrecognized product entry; skipping.")
             continue
 
     if not prices:
@@ -342,9 +342,9 @@ def pack_products(product_list):
         # map product names to the correct arm function
         if name.lower() == "sponge":
             lvl_1()
-        elif name.lower() == "bottle":  # replace with actual product name
+        elif name.lower() == "bottle":  
             lvl_2()
-        elif name.lower() == "rook":  # replace with actual product name
+        elif name.lower() == "rook":  
             lvl_3()
         elif name.lower() == "d12":
             lvl_3a()
@@ -363,7 +363,7 @@ def pack_products(product_list):
 
 ## Main/Menu related functions
 def return_to_menu(menu_choice):
-    '''This function takes the users menu choice as a perameter and asks user if they wish to return to menu. If not they remain in their originally chosen menu choice '''
+    '''This function takes the users menu choice as a parameter and asks the user if they wish to return to menu. If not they remain in their originally chosen menu choice '''
     menu_return = input("\nReturn to menu?(yes/no):")
 
     # if user wishes to return the menu_run loop is bt=roken and user returns to main menu.
