@@ -4,7 +4,33 @@ Course: ENGINEER 1P13: Introduction to Programming
 Term: Fall, 2025
 
 Title: Project 1
+
+Description: 
+
+A command-line ordering system that connects user authentication,
+product lookups, order processing, and automated packing using the Q-Arm.
+The program lets users create accounts, sign in securely, place orders,
+view their order history, and have selected products packed by the robot arm (Q-arm).
+
+Features:
+
+    - Account creation with password validation and bcrypt hashing
+    - User sign-in and credential verification
+    - Product retrieval from products.csv
+    - Order pricing, discounts, taxes, and receipt generation
+    - Order history logging and customer summaries
+    - Physical packing operations via Q-Arm functions
+    - Interactive menu-driven interface
+
+Data Files:
+
+    users.csv      Stores user IDs and hashed passwords
+    products.csv   Lists product names and prices
+    orders.csv     Records completed orders for all users
+
 """
+
+
 ## Imports
 import random
 import time
