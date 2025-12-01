@@ -2,6 +2,16 @@
 # coding: utf-8
 # --------------------------------------------------------------------------------
 
+
+"""
+Q-Arm Control Module
+Provides simple pick and place routines for the Q-Arm, including gripper
+controls and preset motion sequences (lvl_1, lvl_2, lvl_3, lvl_3a).
+Each routine homes the arm, picks the item, and drops it at the dropbox.
+
+"""
+
+
 import sys
 sys.path.append("../")
 
