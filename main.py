@@ -14,6 +14,10 @@ import bcrypt
 from q_arm_code import *
 
 
+
+
+
+
 def load_users():
     """ helper funcntion to authenticate(): loads existing users from csv """
     users = []  # 2D list:[[userid, hash_password],[userid, hash_password]...]
@@ -75,6 +79,19 @@ def authenticate():
 
 
 def sign_up():
+
+    """
+    By: Zakariya Yahmad
+    
+    Creates a new user account by validating a unique username,
+    setting and enforcing password requirements, hashing the password, and
+    storing credentials in "users.csv".
+
+    Returns:
+        None
+        
+    """
+
     ## load existing user ids
     existing_users = []
     # tries to read users.csv file (do not truncate)
