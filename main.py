@@ -318,6 +318,35 @@ def complete_order(user_id, product_list):
 
 
 def customer_summary(userid):
+
+    # ---------------------------------------------------------------
+# Function: customer_summary(userid)
+# Description:
+#     Reads order records from "orders.csv" and generates a 
+#     detailed summary for a specific customer. The summary 
+#     includes:
+#         - Total number of orders made by the user
+#         - Total amount spent
+#         - A breakdown of all products purchased and quantities
+#
+#     The CSV format is expected to follow:
+#         column 0 : user ID
+#         column 1 : order amount (float)
+#         column 2+: product names purchased in the order
+#
+#     The function prints a formatted summary table. If the 
+#     orders file is missing, it notifies the user and returns.
+#
+# Parameters:
+#     userid (str) – the customer ID to look up
+#
+# Dependencies:
+#     - csv module
+#     - collections.Counter
+#
+# ---------------------------------------------------------------
+
+    
     orders_file = "orders.csv"
     total_orders = 0
     total_spent = 0.0
