@@ -129,7 +129,7 @@ def sign_up():
                     user = line.split(",")[0].strip()
                     existing_users.append(user)
     except FileNotFoundError:
-        # file doesn't exist yet — fine
+        # file doesn't exist yet
         pass
 
     # gets new user_id
