@@ -1,9 +1,5 @@
 # Q-ARM Control & Order Processing Software
 
-This repository contains a lightweight Python application for controlling the **Q-ARM** and demonstrating a basic order-processing workflow. The focus is on **robotic arm movement and pick-and-place logic**, not on full production features.
-
----
-
 ## Overview
 
 The application supports:
