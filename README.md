@@ -10,7 +10,7 @@ The application supports:
 
 ---
 
-## Functions
+## Functions (main.py)
 
 - **`load_users()`**  
   Loads stored user data.
@@ -41,3 +41,5 @@ The application supports:
 
 - **`main()`**  
   Runs the main program.
+
+  ##  q_arm_code.py includes robot movement commands and functions only
